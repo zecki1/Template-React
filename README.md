@@ -1,75 +1,156 @@
-# React + TypeScript + Vite
+# 🚀 SuperTemplate React (Vite + Shadcn UI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## O Guia Definitivo para seus Projetos.
 
-Currently, two official plugins are available:
+Um boilerplate **robusto**, **acessível** e **animado**, configurado com **React 19**, **Vite 7**, **Tailwind CSS v3** e **Shadcn UI**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Licença](https://img.shields.io/badge/license-MIT-green)
+![React](https://img.shields.io/badge/react-19.0-blue)
+![Vite](https://img.shields.io/badge/vite-7.0-purple)
+![Tailwind CSS](https://img.shields.io/badge/tailwind-3.4-cyan)
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Este template não é apenas um ponto de partida; é uma solução completa. Ele destaca as funcionalidades exclusivas que implementamos (Acessibilidade, i18n, Animações) e serve como um guia perfeito para quem for usar este template em projetos de produção.
 
-Note: This will impact Vite dev & build performances.
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+Este template vem recheado de funcionalidades prontas para produção:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### ⚡ Core
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+*   **Vite 7** + **React 19** + **TypeScript** (Configuração estrita).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🎨 UI & Design
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+*   **Shadcn UI**: Componentes instalados e configurados (`/src/components/ui`).
+*   **Tailwind CSS**: Variáveis CSS para temas claro/escuro.
+*   **Ícones**: Lucide React + React Icons.
+
+### ♿ Acessibilidade Avançada (A11y)
+
+*   Menu de preferências flutuante.
+*   Filtros para **Daltonismo** (Protanopia, Deuteranopia, etc).
+*   Fonte amigável para **dislexia** (OpenDyslexic toggle).
+*   Ajuste de **tamanho de fonte** dinâmico.
+
+### 🌍 Internacionalização (i18n)
+
+*   Suporte nativo a **PT-BR**, **EN** e **ES**.
+*   Persistência de idioma no `LocalStorage`.
+
+### ✨ Animações
+
+*   **AOS (Animate On Scroll)**: Elementos surgem ao rolar a tela.
+*   **React Rewards**: Confetes e balões para interações de sucesso.
+
+### 🛠 Utilitários
+
+*   Gerenciamento de datas com `date-fns`.
+*   Formulários com `react-hook-form` + `zod`.
+*   Toasts/Notificações com `sonner`.
+
+## 📦 Tech Stack
+
+As principais bibliotecas incluídas no `package.json`:
+
+| Categoria | Bibliotecas |
+| :--- | :--- |
+| Core | `react`, `react-dom`, `vite`, `typescript` |
+| Estilos | `tailwindcss`, `postcss`, `autoprefixer`, `tailwind-merge`, `clsx`, `tailwindcss-animate` |
+| UI Components | `@radix-ui/*`, `shadcn-ui`, `lucide-react`, `react-icons` |
+| Forms | `react-hook-form`, `@hookform/resolvers`, `zod` |
+| Animações | `aos`, `react-rewards`, `framer-motion`, `tw-animate-css` |
+| Utils | `date-fns`, `lodash`, `axios`, `sonner` |
+| Charts | `recharts` |
+| Drag & Drop | `@dnd-kit/core`, `@hello-pangea/dnd` |
+
+## 🚀 Como Começar
+
+Siga os passos abaixo para ter o projeto rodando localmente.
+
+### 1. Clonar o Repositório
+
+Use este template para criar seu novo projeto:
+
+```bash
+git clone https://github.com/seu-usuario/seu-template-react.git nome-do-projeto
+cd nome-do-projeto
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Instalar Dependências
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Rodar o Servidor de Desenvolvimento
+
+```bash
+npm run dev
+```
+
+O projeto estará rodando em `http://localhost:5173`.
+
+## 📂 Estrutura de Pastas
+
+A estrutura de pastas principal para o desenvolvimento:
+
+```text
+src/
+├── components/
+│   ├── providers/       # Contextos (Preferences, Theme)
+│   ├── ui/              # Componentes Shadcn (Button, Card, Input...)
+│   ├── site-header.tsx  # Cabeçalho global
+│   ├── site-footer.tsx  # Rodapé global
+│   ├── settings-menu.tsx # Menu de Acessibilidade
+│   └── ...
+├── lib/
+│   └── utils.ts         # Utilitário 'cn' para classes
+├── styles/              # (Opcional) Estilos globais extras
+├── App.tsx              # Página principal (Tech Demo)
+├── main.tsx             # Ponto de entrada
+└── index.css            # Tailwind directives e Variáveis CSS
+```
+
+## 📝 Checklist para Novos Projetos
+
+Ao iniciar um projeto novo a partir deste template, lembre-se de:
+
+1.  **Atualizar o `package.json`**: Mude o `name`, `version` e `description`.
+2.  **Limpar o `App.tsx`**: O arquivo atual é uma demonstração técnica. Remova as seções de "Hero", "Features" e "Tech Stack" para começar seu layout.
+3.  **Configurar Variáveis de Ambiente**: Crie um arquivo `.env` se for usar serviços externos como Firebase ou Stripe.
+4.  **Título e Favicon**: Atualize no `index.html`.
+
+## 🎨 Personalização
+
+### Mudando as Cores (Tema)
+
+O projeto usa variáveis CSS no arquivo `src/index.css`. Para mudar a cor primária (atualmente azul/slate), altere os valores de `--primary`:
+
+```css
+/* src/index.css */
+:root {
+  /* Exemplo: Mudando para Roxo */
+  --primary: 262.1 83.3% 57.8%;
+  --primary-foreground: 210 40% 98%;
+  /* ... */
+}
+```
+
+### Adicionando Componentes Shadcn
+
+Como o ambiente já está configurado, basta rodar o comando para adicionar novos componentes:
+
+```bash
+npx shadcn@latest add nome-do-componente
+# Exemplo: npx shadcn@latest add menubar
+```
+
+## 🤝 Contribuição
+
+Sinta-se à vontade para abrir [issues](https://github.com/seu-usuario/seu-template-react/issues) ou [pull requests](https://github.com/seu-usuario/seu-template-react/pulls) para melhorar este template base.
+
+## 📄 Licença
+
+Este projeto está sob a [Licença MIT](https://opensource.org/licenses/MIT).
